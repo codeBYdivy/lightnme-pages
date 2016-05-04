@@ -1,1 +1,1 @@
-<?php include_once($_GET['page'] +".html"); ?>
+<?php include_once($_GET['page'] .".html"); ?>
