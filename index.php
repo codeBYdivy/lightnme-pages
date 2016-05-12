@@ -1,10 +1,12 @@
 <?php 
-var_dump($_GET['page']);
-exit;
-	$s = include_once($_GET['page'] .".html"); 
-	var_dump($s);
-
-	if(is_empty($_GET['page']) || $_GET['page']== null){
-		print("Welcome to my pages");
-	}
+$pageVal = ($_GET['page']);
+if($pageVal === 'error') {
+	include_once('error.html')
+}
+else if($pageVal === 'maintenance') {
+	include_once('maintenance.html')	
+}
+else if($pageVal == NULL){
+	print("Welcome to my page");
+}
 ?>
